@@ -1,11 +1,24 @@
 <html>
 <head>
-   <title>Event-Target</title>
+   <title>DOM</title>
 </head>
 <body>
-   <h1>Fokus</h1>
-   Eingabe: <input id="myInput" type="text">
-
-   <script src="script.js"></script>
+   <p>Zu erledigen: </p>
+   <ul id="todo-list">
+      <li>Einkaufen</li>
+      <li>Staubsaugen</li>
+      <li>Fenster putzen</li>
+   </ul>
+   <p>Erledigt: </p>
+   <ul id="done-list">
+      <li>Zimmer aufräumen</li>
+      <li>Hausaufgaben machen</li>
+   </ul>
+    <script>
+       var elements = document.getElementById("todo-list").getElementsByTagName("li");
+       for (var i=0; i<elements.length; i++) {
+          console.log(elements[i].innerText); 
+       }         
+    </script>
 </body>
 </html>
