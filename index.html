@@ -1,24 +1,15 @@
 <html>
 <head>
-   <title>DOM</title>
+   <title>DOM modifizieren</title>
 </head>
-<body>
-   <p>Zu erledigen: </p>
-   <ul id="todo-list">
-      <li>Einkaufen</li>
-      <li>Staubsaugen</li>
-      <li>Fenster putzen</li>
-   </ul>
-   <p>Erledigt: </p>
-   <ul id="done-list">
-      <li>Zimmer aufräumen</li>
-      <li>Hausaufgaben machen</li>
-   </ul>
-    <script>
-       var elements = document.getElementById("todo-list").getElementsByTagName("li");
-       for (var i=0; i<elements.length; i++) {
-          console.log(elements[i].innerText); 
-       }         
-    </script>
+<body>    
+   <div id="main">
+      <p>Lorem</p>
+   </div>
+   <script>
+      var p = document.createElement("p");
+      p.innerHTML = "<strong>Ipsum</strong>";
+      document.getElementById("main").appendChild(p);
+   </script>
 </body>
 </html>
