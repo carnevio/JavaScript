@@ -24,7 +24,7 @@ function remove() {
     
     if (choice.selectedIndex > -1 ) {
         //todo: ausgewählte Zutat von der rechten in die linke Listbox verschieben
-        var option = document.getElementById("choice").options[choice.selectedIndex];
+        var choice = document.getElementById("choice").options[choice.selectedIndex];
 
         document.getElementById("choice").removeChild(choice);
         document.getElementById("ingredients").appendChild(choice);
